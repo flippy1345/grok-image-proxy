@@ -51,7 +51,7 @@ curl http://localhost:8080/v1/images/generations \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "grok-2-image",
+    "model": "grok-imagine-image",
     "prompt": "A futuristic city skyline at sunset",
     "n": 1,
     "size": "1024x1024"
@@ -63,7 +63,7 @@ curl http://localhost:8080/v1/images/generations \
 ```bash
 curl http://localhost:8080/v1/images/edits \
   -H "Authorization: Bearer $XAI_API_KEY" \
-  -F "model=grok-2-image" \
+  -F "model=grok-imagine-image" \
   -F "image=@original.png" \
   -F "prompt=Add a red hat to the person"
 ```
@@ -73,7 +73,7 @@ curl http://localhost:8080/v1/images/edits \
 ```bash
 curl http://localhost:8080/v1/images/edits \
   -H "Authorization: Bearer $XAI_API_KEY" \
-  -F "model=grok-2-image" \
+  -F "model=grok-imagine-image" \
   -F "image[]=@lotion.png" \
   -F "image[]=@candle.png" \
   -F "image[]=@soap.png" \
