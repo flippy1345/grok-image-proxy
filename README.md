@@ -30,9 +30,10 @@ bun run dev
 ### Environment Variables
 
 | Variable | Default | Description |
-|---|---|---|
+| -------- | ------- | ----------- |
 | `PORT` | `8080` | Port the proxy listens on |
 | `GROK_BASE_URL` | `https://api.x.ai/v1` | Grok API base URL |
+| ``
 
 ### Open WebUI Configuration
 

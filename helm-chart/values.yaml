@@ -24,6 +24,6 @@ proxy:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       traefik.ingress.kubernetes.io/router.middlewares: default-redirect-chain@kubernetescrd
     hosts:
-      - grokproxy.nightchicken.de
+      - grokproxy.MYDOMAIN.com
     tls:
       enabled: true
