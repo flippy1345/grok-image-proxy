@@ -98,3 +98,11 @@ In my personal use case I have a kubernetes cluster, which is why I created a he
 If you would like a dockerfile, pipeline and more simple docker setup, feel free to create a PR.
 
 In the mean time you pretty much just need a way to run the index.ts file, which can also be done via vercel, lambda setups or running it with `bun run` on the same server where you host OpenWebUI at the end.
+
+## OpenWebUI setup
+
+Image Edit Setup (**Remember** the API-Key is just the one from your **xAI Console**)
+![image AI](./docs/image-settings-page.png)
+
+Model Connection Setup (**Remember** the API-Key is just the one from your actual **AI Model Provider API**)
+![completion AI](./docs/model-connection-page.png)
