@@ -1,0 +1,35 @@
+{{- if .Values.proxy.ingress.enabled }}
+{{- $fullname := print (include "proxy.fullname" .) }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ $fullname }}
+  labels:
+    {{- include "proxy.labels" . | nindent 4 }}
+  annotations:
+    {{- with .Values.proxy.ingress.annotations }}
+      {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  rules:
+    {{- range .Values.proxy.ingress.hosts }}
+    - http:
+        paths:
+        - backend:
+            service:
+              name: {{ $fullname }}
+              port:
+                name: http
+          path: /
+          pathType: Prefix
+      host: {{ . | quote }}
+    {{- end }}
+  {{- if .Values.proxy.ingress.tls.enabled }}
+  tls:
+    - hosts:
+        {{- range .Values.proxy.ingress.hosts }}
+        - {{ . | quote }}
+        {{- end }}
+      secretName: {{ printf "%s-%s" ( (index .Values.proxy.ingress.hosts 0) | replace "." "-") "crt" }}
+  {{- end }}
+{{- end }}

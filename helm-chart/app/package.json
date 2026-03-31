@@ -1,0 +1,9 @@
+{
+  "name": "ai-image-proxy",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun run --watch index.ts"
+  }
+}

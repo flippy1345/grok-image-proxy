@@ -1,0 +1,5 @@
+apiVersion: v2
+name: ai-image-proxy
+description: OpenAI-compatible image proxy for Grok (x.ai) API
+type: application
+version: 0.1.0
