@@ -2,7 +2,7 @@
 
 A lightweight Bun proxy that translates OpenAI-compatible image API calls into Grok (x.ai) API format.
 
-Useful for tools like Open WebUI that expect the OpenAI image API standard.
+Useful for tools like OpenWebUI that expect the OpenAI image API standard.
 
 ## What it does
 
